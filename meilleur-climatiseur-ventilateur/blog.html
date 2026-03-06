@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Climatiseur & Ventilateur — Guides, Conseils et Tests 2025</title>
+  <meta name="description" content="Tous nos articles sur les climatiseurs et ventilateurs : guides d'achat, tests produits, conseils d'installation et astuces pour économiser de l'énergie.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meilleur-climatiseur-ventilateur.com/blog.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* PAGE HERO */
+    .page-hero {
+      background: linear-gradient(160deg, var(--bg-dark) 0%, #0c2d4a 100%);
+      color: var(--white); padding: 64px 0; text-align: center;
+    }
+    .page-hero p { font-size: 1.05rem; opacity: 0.75; margin-top: 12px; }
+
+    /* BLOG LAYOUT */
+    .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; padding: 56px 0; }
+
+    /* FILTER TABS */
+    .filter-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+    .filter-tab {
+      padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 500;
+      border: 2px solid var(--border); background: var(--white); cursor: pointer;
+      transition: all var(--transition); color: var(--text-muted);
+    }
+    .filter-tab:hover, .filter-tab.active {
+      background: var(--primary); color: white; border-color: var(--primary);
+    }
+
+    /* ARTICLES GRID */
+    .articles-list { display: flex; flex-direction: column; gap: 28px; }
+
+    /* ARTICLE CARD HORIZONTAL */
+    .article-h-card {
+      display: grid; grid-template-columns: 200px 1fr;
+      background: var(--white); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+    .article-h-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .article-h-img {
+      min-height: 160px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem;
+    }
+    .cat-clim { background: linear-gradient(135deg, var(--primary), #1e6fa8); }
+    .cat-ventil { background: linear-gradient(135deg, #00c9b1, #0a8a7a); }
+    .cat-guide { background: linear-gradient(135deg, #f59e0b, #f97316); }
+    .cat-eco { background: linear-gradient(135deg, #059669, #10b981); }
+    .article-h-content { padding: 24px 28px; display: flex; flex-direction: column; }
+    .article-h-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .article-h-content h2 { font-size: 1.2rem; margin-bottom: 10px; transition: color var(--transition); }
+    .article-h-card:hover h2 { color: var(--primary); }
+    .article-h-content p { color: var(--text-muted); font-size: 0.92rem; flex: 1; margin-bottom: 14px; }
+    .article-meta { display: flex; gap: 16px; font-size: 0.82rem; color: var(--text-muted); margin-top: auto; }
+    .article-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* FEATURED ARTICLE */
+    .featured-article {
+      background: var(--white); border-radius: var(--radius);
+      box-shadow: var(--shadow-lg); overflow: hidden;
+      margin-bottom: 28px; border: 2px solid var(--accent);
+    }
+    .featured-badge-wrap { position: relative; }
+    .featured-img {
+      height: 260px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      display: flex; align-items: center; justify-content: center; font-size: 5rem;
+    }
+    .featured-label {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--accent); color: white; padding: 5px 14px; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 700;
+    }
+    .featured-content { padding: 28px; }
+    .featured-content h2 { font-size: 1.4rem; margin-bottom: 12px; }
+    .featured-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px; }
+
+    /* SIDEBAR */
+    .sidebar { }
+    .sidebar-widget {
+      background: var(--white); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 24px; margin-bottom: 24px;
+    }
+    .sidebar-widget h3 { font-size: 1rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--accent); }
+    .sidebar-links { list-style: none; }
+    .sidebar-links li { padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .sidebar-links li:last-child { border: none; padding-bottom: 0; }
+    .sidebar-links a { font-size: 0.9rem; color: var(--text); font-weight: 500; transition: color var(--transition); display: flex; align-items: center; gap: 8px; }
+    .sidebar-links a:hover { color: var(--primary); }
+    .sidebar-links .rank { font-size: 0.75rem; background: var(--bg); padding: 2px 8px; border-radius: 50px; color: var(--text-muted); }
+    /* Newsletter widget */
+    .newsletter-widget { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; }
+    .newsletter-widget h3 { color: white; border-bottom-color: rgba(255,255,255,0.3); }
+    .newsletter-widget p { font-size: 0.88rem; opacity: 0.85; margin-bottom: 16px; }
+    .newsletter-input {
+      width: 100%; padding: 11px 16px; border-radius: var(--radius-sm);
+      border: none; font-size: 0.9rem; margin-bottom: 10px;
+      font-family: var(--font-body);
+    }
+    .newsletter-btn {
+      width: 100%; padding: 12px; border-radius: var(--radius-sm);
+      background: var(--accent-warm); color: white; border: none; cursor: pointer;
+      font-weight: 700; font-size: 0.95rem; font-family: var(--font-body);
+      transition: background var(--transition);
+    }
+    .newsletter-btn:hover { background: #e85a25; }
+    /* Tags cloud */
+    .tags-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 5px 14px; background: var(--bg); border-radius: 50px;
+      font-size: 0.82rem; color: var(--text-muted); transition: all var(--transition);
+    }
+    .tag:hover { background: var(--primary); color: white; }
+
+    /* PAGINATION */
+    .pagination {
+      display: flex; gap: 8px; justify-content: center; align-items: center;
+      margin-top: 48px;
+    }
+    .page-btn {
+      width: 40px; height: 40px; border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      background: var(--white); border: 2px solid var(--border); cursor: pointer;
+      font-weight: 600; font-size: 0.9rem; transition: all var(--transition);
+      color: var(--text-muted);
+    }
+    .page-btn:hover, .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .page-btn.arrow { font-size: 1.1rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      .sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    @media (max-width: 600px) {
+      .article-h-card { grid-template-columns: 1fr; }
+      .article-h-img { min-height: 120px; }
+      .sidebar { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Meilleur Climatiseur Ventilateur",
+    "url": "https://meilleur-climatiseur-ventilateur.com/blog.html",
+    "description": "Articles, guides et tests sur les climatiseurs et ventilateurs"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="badge badge-accent">📚 Blog</span>
+      <h1 style="margin-top:12px">Guides & Conseils Climatisation</h1>
+      <p>Tout savoir pour choisir, installer et utiliser votre climatiseur ou ventilateur</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="blog-layout">
+
+      <!-- MAIN CONTENT -->
+      <main>
+        <!-- Filters -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" onclick="filterCat(this,'all')">Tous les articles</button>
+          <button class="filter-tab" onclick="filterCat(this,'clim')">❄️ Climatiseurs</button>
+          <button class="filter-tab" onclick="filterCat(this,'ventil')">💨 Ventilateurs</button>
+          <button class="filter-tab" onclick="filterCat(this,'guide')">📖 Guides d'achat</button>
+          <button class="filter-tab" onclick="filterCat(this,'eco')">🔋 Énergie</button>
+        </div>
+
+        <!-- Featured article -->
+        <a href="article.html" class="featured-article animate-in">
+          <div class="featured-badge-wrap">
+            <div class="featured-img">🌡️</div>
+            <span class="featured-label">⭐ Article à la une</span>
+          </div>
+          <div class="featured-content">
+            <div style="margin-bottom:10px">
+              <span class="badge badge-primary">Guide d'achat</span>
+              <span style="font-size:0.82rem;color:var(--text-muted);margin-left:12px">📅 15 juin 2025 · ⏱ 12 min de lecture</span>
+            </div>
+            <h2>Comment choisir son climatiseur en 2025 : le guide complet</h2>
+            <p>Puissance, classe énergétique, marques, installation, prix… On vous explique tout ce qu'il faut savoir pour ne pas se tromper lors de l'achat de votre prochain climatiseur. Un guide accessible même sans connaissances techniques.</p>
+            <span class="btn btn-primary" style="padding:10px 22px;font-size:0.95rem">Lire le guide →</span>
+          </div>
+        </a>
+
+        <!-- Articles list -->
+        <div class="articles-list" id="articlesList">
+
+          <a href="article.html" class="article-h-card animate-in" data-cat="clim">
+            <div class="article-h-img cat-clim">❄️</div>
+            <div class="article-h-content">
+              <div class="article-h-top">
+                <span class="badge badge-primary">Climatiseurs</span>
+              </div>
+              <h2>Climatiseur réversible ou simple froid : notre comparatif</h2>
+              <p>Le réversible permet de chauffer en hiver, mais représente un investissement plus important. Analyse complète des deux options pour vous aider à choisir.</p>
+              <div class="article-meta">
+                <span>📅 12 juin 2025</span>
+                <span>⏱ 8 min</span>
+                <span>👁 2 340 lectures</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="article.html" class="article-h-card animate-in" data-cat="ventil">
+            <div class="article-h-img cat-ventil">💨</div>
+            <div class="article-h-content">
+              <div class="article-h-top">
+                <span class="badge badge-accent">Ventilateurs</span>
+              </div>
+              <h2>Dyson AM07 : vaut-il vraiment 500€ ? Notre test complet</h2>
+              <p>On a testé le ventilateur sans pales Dyson pendant un mois en appartement. Voici notre verdict sur les performances, le bruit et la consommation.</p>
+              <div class="article-meta">
+                <span>📅 5 juin 2025</span>
+                <span>⏱ 6 min</span>
+                <span>👁 1 870 lectures</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="article.html" class="article-h-card animate-in" data-cat="eco">
+            <div class="article-h-img cat-eco">🔋</div>
+            <div class="article-h-content">
+              <div class="article-h-top">
+                <span class="badge" style="background:rgba(5,150,105,0.12);color:#059669">Énergie</span>
+              </div>
+              <h2>Consommation électrique : combien coûte un clim à l'heure en 2025 ?</h2>
+              <p>Calculs concrets basés sur les tarifs EDF 2025. Vous serez peut-être surpris par les différences entre les modèles A+++ et A+.</p>
+              <div class="article-meta">
+                <span>📅 28 mai 2025</span>
+                <span>⏱ 10 min</span>
+                <span>👁 3 120 lectures</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="article.html" class="article-h-card animate-in" data-cat="guide">
+            <div class="article-h-img cat-guide">📐</div>
+            <div class="article-h-content">
+              <div class="article-h-top">
+                <span class="badge badge-warm">Guide</span>
+              </div>
+              <h2>Quelle puissance de climatiseur pour mon appartement ?</h2>
+              <p>Calculez facilement la puissance dont vous avez besoin selon la surface, l'isolation et l'exposition de votre logement. Avec notre outil de calcul.</p>
+              <div class="article-meta">
+                <span>📅 20 mai 2025</span>
+                <span>⏱ 5 min</span>
+                <span>👁 4 560 lectures</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="article.html" class="article-h-card animate-in" data-cat="clim">
+            <div class="article-h-img cat-clim">🔧</div>
+            <div class="article-h-content">
+              <div class="article-h-top">
+                <span class="badge badge-primary">Climatiseurs</span>
+              </div>
+              <h2>Installation d'un climatiseur : ce qu'il faut savoir avant de commencer</h2>
+              <p>Peut-on installer soi-même ? Quel professionnel choisir ? Combien ça coûte ? Toutes les réponses pour préparer votre projet d'installation sereinement.</p>
+              <div class="article-meta">
+                <span>📅 14 mai 2025</span>
+                <span>⏱ 7 min</span>
+                <span>👁 1 980 lectures</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="article.html" class="article-h-card animate-in" data-cat="ventil">
+            <div class="article-h-img cat-ventil">🌀</div>
+            <div class="article-h-content">
+              <div class="article-h-top">
+                <span class="badge badge-accent">Ventilateurs</span>
+              </div>
+              <h2>Ventilateur colonne vs ventilateur tour : lequel choisir ?</h2>
+              <p>Deux formats populaires, deux usages différents. Notre guide pour choisir le bon type de ventilateur selon votre espace et vos besoins.</p>
+              <div class="article-meta">
+                <span>📅 8 mai 2025</span>
+                <span>⏱ 6 min</span>
+                <span>👁 1 340 lectures</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination">
+          <button class="page-btn arrow">←</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span style="color:var(--text-muted)">…</span>
+          <button class="page-btn">8</button>
+          <button class="page-btn arrow">→</button>
+        </nav>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- Top articles -->
+        <div class="sidebar-widget">
+          <h3>🔥 Articles populaires</h3>
+          <ul class="sidebar-links">
+            <li><a href="article.html"><span class="rank">#1</span>Quelle puissance de clim choisir ?</a></li>
+            <li><a href="article.html"><span class="rank">#2</span>Combien coûte un clim à l'heure ?</a></li>
+            <li><a href="article.html"><span class="rank">#3</span>Top 3 climatiseurs 2025</a></li>
+            <li><a href="article.html"><span class="rank">#4</span>Dyson AM07 : notre test</a></li>
+            <li><a href="article.html"><span class="rank">#5</span>Clim réversible ou simple froid ?</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="sidebar-widget newsletter-widget">
+          <h3>📬 Newsletter</h3>
+          <p>Recevez nos nouveaux comparatifs et bons plans directement dans votre boîte mail.</p>
+          <input type="email" class="newsletter-input" placeholder="votre@email.fr">
+          <button class="newsletter-btn">Je m'inscris gratuitement</button>
+        </div>
+
+        <!-- Top 3 CTA -->
+        <div class="sidebar-widget" style="background:linear-gradient(135deg,var(--primary),var(--accent));color:white;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:8px">🏆</div>
+          <h3 style="color:white;border-bottom-color:rgba(255,255,255,0.3)">Notre Top 3 2025</h3>
+          <p style="font-size:0.88rem;opacity:0.85;margin-bottom:16px">21 produits testés. 3 recommandés. Mis à jour juin 2025.</p>
+          <a href="top3.html" class="btn btn-accent" style="width:100%;justify-content:center">Voir le classement →</a>
+        </div>
+
+        <!-- Tags -->
+        <div class="sidebar-widget">
+          <h3>🏷️ Sujets</h3>
+          <div class="tags-cloud">
+            <a href="blog.html" class="tag">Climatiseur</a>
+            <a href="blog.html" class="tag">Ventilateur</a>
+            <a href="blog.html" class="tag">Daikin</a>
+            <a href="blog.html" class="tag">Mitsubishi</a>
+            <a href="blog.html" class="tag">Installation</a>
+            <a href="blog.html" class="tag">Économies</a>
+            <a href="blog.html" class="tag">Dyson</a>
+            <a href="blog.html" class="tag">Réversible</a>
+            <a href="blog.html" class="tag">Puissance</a>
+            <a href="blog.html" class="tag">Classe A+++</a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <script src="js/components.js"></script>
+  <script>
+    function filterCat(btn, cat) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#articlesList .article-h-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'grid';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

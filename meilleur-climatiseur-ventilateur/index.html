@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meilleur Climatiseur & Ventilateur 2025 — Comparatifs & Tests Indépendants</title>
+  <meta name="description" content="Trouvez le meilleur climatiseur ou ventilateur en 2025. Comparatifs objectifs, tests approfondis et conseils d'experts pour un été serein.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meilleur-climatiseur-ventilateur.com/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meilleur Climatiseur & Ventilateur 2025">
+  <meta property="og:description" content="Comparatifs objectifs, tests approfondis et conseils d'experts pour choisir le meilleur climatiseur ou ventilateur.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://meilleur-climatiseur-ventilateur.com/">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2a45 100%);
+      color: var(--white); overflow: hidden; position: relative;
+      padding: 100px 0 80px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(0,201,177,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(26,122,181,0.2) 0%, transparent 50%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 64px; position: relative; z-index: 2;
+    }
+    .hero-badge { margin-bottom: 20px; }
+    .hero h1 { margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero-desc { font-size: 1.15rem; opacity: 0.8; margin-bottom: 36px; max-width: 480px; }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-trust {
+      display: flex; align-items: center; gap: 24px;
+      padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; opacity: 0.7; }
+    .trust-icon { font-size: 1.2rem; }
+    /* Hero visual */
+    .hero-visual {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius); padding: 24px;
+      backdrop-filter: blur(8px);
+      transition: transform var(--transition);
+    }
+    .hero-card:hover { transform: translateY(-4px); }
+    .hero-card:first-child { grid-column: span 2; }
+    .hero-card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .hero-card h3 { font-size: 1rem; margin-bottom: 6px; color: var(--white); }
+    .hero-card p { font-size: 0.85rem; opacity: 0.6; }
+    .hero-card .score {
+      display: inline-block; background: var(--accent); color: var(--white);
+      border-radius: 6px; padding: 2px 10px; font-size: 0.85rem; font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    /* ===== STATS ===== */
+    .stats-bar {
+      background: var(--primary); color: var(--white); padding: 32px 0;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+    .stat-number { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: 0.88rem; opacity: 0.75; margin-top: 4px; }
+
+    /* ===== HOW IT WORKS ===== */
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+    .how-card { text-align: center; padding: 40px 28px; }
+    .how-icon {
+      width: 72px; height: 72px; border-radius: 20px; margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+    }
+    .how-step { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .how-card h3 { margin-bottom: 10px; }
+    .how-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    /* ===== CATEGORIES ===== */
+    .categories-section { background: var(--white); }
+    .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+    .cat-card {
+      display: flex; align-items: center; gap: 24px;
+      padding: 28px; position: relative; overflow: hidden;
+    }
+    .cat-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(0,201,177,0.05));
+      pointer-events: none;
+    }
+    .cat-icon { font-size: 3rem; flex-shrink: 0; }
+    .cat-card h3 { margin-bottom: 6px; }
+    .cat-card p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 14px; }
+
+    /* ===== FEATURED ARTICLES ===== */
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+    .article-card { display: flex; flex-direction: column; }
+    .article-img {
+      height: 180px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+    .article-content { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .article-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px; display: flex; gap: 12px; }
+    .article-content h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .article-content p { color: var(--text-muted); font-size: 0.9rem; flex: 1; }
+    .read-more { color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; }
+    .read-more:hover { color: var(--accent); }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: 24px; padding: 64px; text-align: center; color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '❄️';
+      position: absolute; font-size: 180px; opacity: 0.05;
+      right: -20px; top: 50%; transform: translateY(-50%);
+    }
+    .cta-banner h2 { margin-bottom: 16px; }
+    .cta-banner p { opacity: 0.8; font-size: 1.1rem; margin-bottom: 32px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .how-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Meilleur Climatiseur Ventilateur",
+    "url": "https://meilleur-climatiseur-ventilateur.com",
+    "description": "Guide indépendant de comparaison de climatiseurs et ventilateurs",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://meilleur-climatiseur-ventilateur.com/blog.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav injected by JS -->
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="badge badge-accent">✓ Comparatifs 100% indépendants</span>
+          </div>
+          <h1>Trouvez le <em>meilleur climatiseur</em> ou ventilateur en 2025</h1>
+          <p class="hero-desc">Tests approfondis, comparatifs objectifs et conseils d'experts pour choisir sans se tromper. Fini la chaleur, fini les mauvais achats.</p>
+          <div class="hero-ctas">
+            <a href="top3.html" class="btn btn-accent btn-lg">🏆 Voir le Top 3 2025</a>
+            <a href="blog.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:white">Lire le blog →</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item"><span class="trust-icon">⭐</span> 4.8/5 satisfaction</div>
+            <div class="trust-item"><span class="trust-icon">🔬</span> Tests produits réels</div>
+            <div class="trust-item"><span class="trust-icon">📅</span> Mis à jour 2025</div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="score">N°1 2025</div>
+            <h3>🏆 Daikin Perfera 2,5kW</h3>
+            <p>Le meilleur rapport qualité-prix de l'année selon nos tests</p>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">❄️</div>
+            <h3>Climatiseurs</h3>
+            <p>12 modèles testés</p>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">💨</div>
+            <h3>Ventilateurs</h3>
+            <p>9 modèles testés</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="animate-in">
+          <div class="stat-number">21+</div>
+          <div class="stat-label">Produits testés</div>
+        </div>
+        <div class="animate-in">
+          <div class="stat-number">4.8★</div>
+          <div class="stat-label">Note moyenne lecteurs</div>
+        </div>
+        <div class="animate-in">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Indépendant & objectif</div>
+        </div>
+        <div class="animate-in">
+          <div class="stat-number">2025</div>
+          <div class="stat-label">Mis à jour</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto">
+        <span class="badge badge-primary">Notre méthode</span>
+        <h2 style="margin-top:12px">Comment on sélectionne les meilleurs produits ?</h2>
+      </div>
+      <div class="how-grid">
+        <div class="card how-card animate-in">
+          <div class="how-icon">🔬</div>
+          <div class="how-step">Étape 1</div>
+          <h3>Tests en conditions réelles</h3>
+          <p>Chaque produit est utilisé dans un appartement réel pendant plusieurs semaines avant notation.</p>
+        </div>
+        <div class="card how-card animate-in">
+          <div class="how-icon">📊</div>
+          <div class="how-step">Étape 2</div>
+          <h3>Critères objectifs</h3>
+          <p>Performance, consommation, bruit, facilité d'installation, rapport qualité-prix. Tout est noté.</p>
+        </div>
+        <div class="card how-card animate-in">
+          <div class="how-icon">✅</div>
+          <div class="how-step">Étape 3</div>
+          <h3>Recommandation finale</h3>
+          <p>Seuls les produits qui passent nos critères stricts apparaissent dans nos tops. Sans compromis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section categories-section">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto 0">
+        <span class="badge badge-accent">Catégories</span>
+        <h2 style="margin-top:12px">Que cherchez-vous ?</h2>
+        <p style="color:var(--text-muted);margin-top:10px">Nos guides sont organisés par type de produit pour trouver ce qu'il vous faut rapidement.</p>
+      </div>
+      <div class="cat-grid">
+        <a href="top3.html" class="card cat-card animate-in">
+          <div class="cat-icon">❄️</div>
+          <div>
+            <h3>Climatiseurs</h3>
+            <p>Splits, portables, monosplits… Trouvez le climatiseur adapté à votre logement et votre budget.</p>
+            <span class="btn btn-outline" style="padding:8px 18px;font-size:0.9rem">Voir les tops →</span>
+          </div>
+        </a>
+        <a href="top3.html" class="card cat-card animate-in">
+          <div class="cat-icon">💨</div>
+          <div>
+            <h3>Ventilateurs</h3>
+            <p>Tour, colonne, sans pales, de table… Le bon ventilateur pour chaque pièce et chaque usage.</p>
+            <span class="btn btn-outline" style="padding:8px 18px;font-size:0.9rem">Voir les tops →</span>
+          </div>
+        </a>
+        <a href="top3.html" class="card cat-card animate-in">
+          <div class="cat-icon">🔋</div>
+          <div>
+            <h3>Économies d'énergie</h3>
+            <p>Climatiseurs les plus économiques en classe A+++ pour réduire votre facture EDF cet été.</p>
+            <span class="btn btn-outline" style="padding:8px 18px;font-size:0.9rem">Voir les tops →</span>
+          </div>
+        </a>
+        <a href="blog.html" class="card cat-card animate-in">
+          <div class="cat-icon">📖</div>
+          <div>
+            <h3>Guides d'achat</h3>
+            <p>Nos articles experts pour comprendre les critères techniques avant d'acheter.</p>
+            <span class="btn btn-outline" style="padding:8px 18px;font-size:0.9rem">Lire les guides →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLES -->
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0">
+        <div>
+          <span class="badge badge-primary">Blog</span>
+          <h2 style="margin-top:10px">Derniers articles</h2>
+        </div>
+        <a href="blog.html" class="btn btn-outline">Tous les articles →</a>
+      </div>
+      <div class="articles-grid" style="margin-top:36px">
+        <a href="article.html" class="card article-card animate-in">
+          <div class="article-img">❄️</div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 12 juin 2025</span>
+              <span>⏱ 8 min</span>
+            </div>
+            <h3>Climatiseur réversible ou simple froid : lequel choisir ?</h3>
+            <p>Le réversible permet de chauffer en hiver, mais coûte plus cher. Notre analyse complète.</p>
+            <span class="read-more">Lire l'article →</span>
+          </div>
+        </a>
+        <a href="article.html" class="card article-card animate-in">
+          <div class="article-img" style="background:linear-gradient(135deg,#0a4f7a,#00c9b1)">💨</div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 5 juin 2025</span>
+              <span>⏱ 6 min</span>
+            </div>
+            <h3>Ventilateur sans pales Dyson : vaut-il vraiment 500€ ?</h3>
+            <p>On a testé le Dyson AM07 pendant un mois. Voici notre verdict sans concession.</p>
+            <span class="read-more">Lire l'article →</span>
+          </div>
+        </a>
+        <a href="article.html" class="card article-card animate-in">
+          <div class="article-img" style="background:linear-gradient(135deg,#ff6b35,#f59e0b)">🔋</div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 28 mai 2025</span>
+              <span>⏱ 10 min</span>
+            </div>
+            <h3>Consommation électrique : combien coûte un clim à l'heure ?</h3>
+            <p>Calculs concrets avec les tarifs EDF 2025. Surprenants pour certains modèles.</p>
+            <span class="read-more">Lire l'article →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-banner animate-in">
+        <h2>Prêt à choisir votre prochain climatiseur ?</h2>
+        <p>Notre top 3 mis à jour en 2025 vous guide vers le meilleur achat pour votre budget.</p>
+        <a href="top3.html" class="btn btn-accent btn-lg">🏆 Voir le Top 3 maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer injected by JS -->
+
+  <script src="js/components.js"></script>
+</body>
+</html>
