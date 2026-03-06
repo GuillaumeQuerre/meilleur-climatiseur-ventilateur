@@ -9,9 +9,16 @@ const NAV_HTML = `
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="top3.html">Top Produits</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle">Top Produits ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="top3-climatiseurs.html">❄️ Meilleurs climatiseurs</a></li>
+          <li><a href="top3-ventilateurs.html">💨 Meilleurs ventilateurs</a></li>
+          <li><a href="top3-climatiseurs-ecologiques.html">🌿 Climatiseurs écologiques</a></li>
+        </ul>
+      </li>
       <li><a href="blog.html">Blog</a></li>
-      <li><a href="top3.html" class="nav-cta">Voir le Top 3 →</a></li>
+      <li><a href="top3-climatiseurs.html" class="nav-cta">Voir les Tops →</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
@@ -19,7 +26,9 @@ const NAV_HTML = `
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
-    <li><a href="top3.html" onclick="toggleMenu()">Top Produits</a></li>
+    <li><a href="top3-climatiseurs.html" onclick="toggleMenu()">❄️ Meilleurs climatiseurs</a></li>
+    <li><a href="top3-ventilateurs.html" onclick="toggleMenu()">💨 Meilleurs ventilateurs</a></li>
+    <li><a href="top3-climatiseurs-ecologiques.html" onclick="toggleMenu()">🌿 Climatiseurs écologiques</a></li>
     <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
   </ul>
 </div>
@@ -93,6 +102,24 @@ const mobileMenuStyles = `
 .mobile-menu ul li { padding: 12px 0; border-bottom: 1px solid var(--border); }
 .mobile-menu ul li:last-child { border: none; }
 .mobile-menu ul a { font-size: 1.1rem; font-weight: 500; color: var(--text); }
+/* Dropdown nav */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle { cursor: pointer; }
+.dropdown-menu {
+  display: none; position: absolute; top: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  background: white; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  min-width: 240px; list-style: none; padding: 8px 0; z-index: 200;
+}
+.nav-dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li { padding: 0; border: none !important; }
+.dropdown-menu a {
+  display: block; padding: 11px 20px; font-size: 0.92rem !important;
+  font-weight: 500 !important; color: var(--text) !important;
+  transition: background var(--transition);
+}
+.dropdown-menu a:hover { background: var(--bg); color: var(--primary) !important; }
 </style>
 `;
 
