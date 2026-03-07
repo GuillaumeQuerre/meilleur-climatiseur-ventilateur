@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quel climatiseur pour vous ? — Guide personnalisé 2025</title>
+  <meta name="description" content="Trouvez le climatiseur parfait pour votre situation en quelques étapes. Guide interactif personnalisé selon vos besoins, votre logement et votre budget.">
+  <link rel="canonical" href="https://meilleur-climatiseur-ventilateur.com/guide-personnalise.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM
+       Esthétique : éditorial / magazine de luxe sobre.
+       Palette froide avec accent chaud. Typographie mixte serif/sans.
+    ============================================================ */
+    :root {
+      --ink:      #0f1923;
+      --ink-soft: #3d4f5e;
+      --mist:     #f2f5f8;
+      --border:   #dde3ea;
+      --ice:      #e8f4fd;
+      --blue:     #1469b5;
+      --blue-dk:  #0d4f8a;
+      --cyan:     #00bcd4;
+      --warm:     #ff5e3a;
+      --gold:     #f5a623;
+      --white:    #ffffff;
+      --serif:    'Instrument Serif', Georgia, serif;
+      --sans:     'Outfit', system-ui, sans-serif;
+      --ease:     cubic-bezier(.4,0,.2,1);
+      --r:        14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--ink);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ---- AMBIENT BACKGROUND ---- */
+    .bg-ambient {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 60% at 10% 10%, rgba(20,105,181,.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 90% 80%, rgba(0,188,212,.10) 0%, transparent 55%),
+        radial-gradient(ellipse 100% 80% at 50% 50%, #0d1e2e 0%, #0f1923 100%);
+    }
+
+    /* ---- WRAPPER ---- */
+    .page-wrap {
+      position: relative; z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+    }
+
+    /* ---- LOGO STRIP ---- */
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 28px 0 0;
+    }
+    .topbar-logo {
+      font-family: var(--sans); font-weight: 700; font-size: .95rem;
+      color: rgba(255,255,255,.5); letter-spacing: .02em;
+    }
+    .topbar-logo span { color: var(--cyan); }
+    .topbar-tag {
+      font-size: .78rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ---- PROGRESS BAR ---- */
+    .progress-wrap {
+      padding: 32px 0 0;
+      opacity: 0; transition: opacity .4s var(--ease);
+    }
+    .progress-wrap.visible { opacity: 1; }
+    .progress-label {
+      font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.35); margin-bottom: 10px;
+      display: flex; justify-content: space-between;
+    }
+    .progress-label span { color: var(--cyan); }
+    .progress-track {
+      height: 3px; background: rgba(255,255,255,.08); border-radius: 50px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; border-radius: 50px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      transition: width .6s var(--ease);
+      width: 0%;
+    }
+
+    /* ---- INTRO SECTION ---- */
+    .intro-section { padding-top: 72px; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 24px; height: 2px; background: var(--cyan);
+    }
+
+    .intro-title {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.18;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .intro-title em {
+      font-style: italic;
+      background: linear-gradient(135deg, #6dd5fa, #2980b9);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro-body {
+      font-size: 1.08rem; line-height: 1.78;
+      color: rgba(255,255,255,.65);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+    .intro-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+
+    /* ---- START TRIGGER ---- */
+    .start-trigger {
+      display: flex; align-items: center; gap: 16px;
+      padding: 24px 28px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--r);
+      cursor: pointer;
+      transition: background .2s var(--ease), border-color .2s var(--ease);
+      user-select: none;
+    }
+    .start-trigger:hover {
+      background: rgba(20,105,181,.15);
+      border-color: rgba(20,105,181,.4);
+    }
+    .start-trigger.checked {
+      background: rgba(0,188,212,.08);
+      border-color: rgba(0,188,212,.3);
+    }
+    .checkbox-custom {
+      width: 26px; height: 26px; flex-shrink: 0;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,.25);
+      background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .25s var(--ease);
+    }
+    .start-trigger.checked .checkbox-custom {
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+    .checkbox-check {
+      opacity: 0; transform: scale(0);
+      transition: all .2s var(--ease);
+      color: var(--ink);
+      font-size: .85rem; font-weight: 800;
+    }
+    .start-trigger.checked .checkbox-check {
+      opacity: 1; transform: scale(1);
+    }
+    .trigger-text { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,.8); }
+    .trigger-text span { color: var(--cyan); font-weight: 600; }
+
+    /* ---- STEP SECTIONS ---- */
+    .step-section {
+      margin-top: 64px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .55s var(--ease), transform .55s var(--ease);
+    }
+    .step-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Step header */
+    .step-header {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 28px;
+    }
+    .step-num {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--sans); font-weight: 700; font-size: .85rem;
+      color: white;
+    }
+    .step-divider {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,.12), transparent);
+    }
+    .step-badge {
+      font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+
+    .step-question {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      line-height: 1.3;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .step-sub {
+      font-size: .95rem; color: rgba(255,255,255,.45);
+      margin-bottom: 32px; line-height: 1.6;
+    }
+
+    /* ---- CHOICE CARDS ---- */
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .choice-card {
+      position: relative;
+      padding: 20px 18px 18px;
+      background: rgba(255,255,255,.04);
+      border: 1.5px solid rgba(255,255,255,.09);
+      border-radius: var(--r);
+      cursor: pointer;
+      transition: all .22s var(--ease);
+      overflow: hidden;
+    }
+    .choice-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(20,105,181,.0), rgba(0,188,212,.0));
+      transition: background .22s var(--ease);
+    }
+    .choice-card:hover {
+      border-color: rgba(0,188,212,.35);
+      background: rgba(0,188,212,.07);
+      transform: translateY(-2px);
+    }
+    .choice-card:hover::before {
+      background: linear-gradient(135deg, rgba(20,105,181,.06), rgba(0,188,212,.06));
+    }
+    .choice-card.selected {
+      border-color: var(--cyan);
+      background: rgba(0,188,212,.12);
+      transform: translateY(-2px);
+    }
+    .choice-card.selected::before {
+      background: linear-gradient(135deg, rgba(20,105,181,.08), rgba(0,188,212,.10));
+    }
+    .choice-radio {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.2);
+      margin-bottom: 14px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .2s var(--ease);
+    }
+    .choice-card.selected .choice-radio {
+      border-color: var(--cyan);
+      background: var(--cyan);
+    }
+    .choice-radio::after {
+      content: ''; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--ink);
+      transform: scale(0);
+      transition: transform .2s var(--ease);
+    }
+    .choice-card.selected .choice-radio::after { transform: scale(1); }
+
+    .choice-icon { font-size: 1.7rem; margin-bottom: 10px; display: block; }
+    .choice-label {
+      font-weight: 600; font-size: .95rem;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 5px;
+    }
+    .choice-desc {
+      font-size: .8rem; color: rgba(255,255,255,.38);
+      line-height: 1.5;
+    }
+    /* Selected check */
+    .choice-check {
+      position: absolute; top: 14px; right: 14px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--cyan);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; color: var(--ink); font-weight: 800;
+      opacity: 0; transform: scale(0);
+      transition: all .2s var(--ease);
+    }
+    .choice-card.selected .choice-check { opacity: 1; transform: scale(1); }
+
+    /* ---- VALIDATE BUTTON (inside step) ---- */
+    .step-validate {
+      display: flex; align-items: center; gap: 14px;
+      padding: 20px 24px;
+      background: rgba(255,255,255,.03);
+      border: 1.5px solid rgba(255,255,255,.08);
+      border-radius: var(--r);
+      cursor: pointer;
+      transition: all .22s var(--ease);
+      user-select: none;
+      opacity: .4; pointer-events: none;
+    }
+    .step-validate.active {
+      opacity: 1; pointer-events: all;
+      border-color: rgba(0,188,212,.25);
+      background: rgba(0,188,212,.06);
+    }
+    .step-validate.active:hover {
+      border-color: var(--cyan);
+      background: rgba(0,188,212,.12);
+    }
+    .step-validate.done {
+      background: rgba(0,188,212,.08);
+      border-color: rgba(0,188,212,.3);
+    }
+    .validate-checkbox {
+      width: 26px; height: 26px; flex-shrink: 0;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center;
+      transition: all .25s var(--ease);
+    }
+    .step-validate.done .validate-checkbox {
+      background: var(--cyan); border-color: var(--cyan);
+    }
+    .validate-check {
+      opacity: 0; transform: scale(0);
+      transition: all .2s var(--ease);
+      color: var(--ink); font-size: .85rem; font-weight: 800;
+    }
+    .step-validate.done .validate-check { opacity: 1; transform: scale(1); }
+    .validate-text { font-size: .95rem; font-weight: 500; color: rgba(255,255,255,.6); }
+    .validate-text strong { color: rgba(255,255,255,.9); }
+    .validate-arrow {
+      margin-left: auto; font-size: 1.1rem;
+      color: rgba(255,255,255,.25);
+      transition: transform .2s var(--ease), color .2s;
+    }
+    .step-validate.active:hover .validate-arrow {
+      color: var(--cyan);
+      transform: translateX(4px);
+    }
+
+    /* ---- SEPARATOR LINE ---- */
+    .section-line {
+      margin-top: 64px;
+      display: flex; align-items: center; gap: 16px;
+      opacity: 0; transition: opacity .5s var(--ease) .1s;
+    }
+    .section-line.visible { opacity: 1; }
+    .section-line-bar {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+    }
+    .section-line-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,.15);
+    }
+
+    /* ---- RESULT SECTION ---- */
+    .result-section {
+      margin-top: 64px;
+      opacity: 0; transform: translateY(40px);
+      transition: opacity .65s var(--ease), transform .65s var(--ease);
+    }
+    .result-section.visible { opacity: 1; transform: translateY(0); }
+
+    .result-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px;
+    }
+    .result-eyebrow::before {
+      content: ''; width: 20px; height: 2px; background: var(--gold);
+    }
+
+    .result-card {
+      background: rgba(255,255,255,.04);
+      border: 1.5px solid rgba(255,255,255,.10);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    /* Result top gradient band */
+    .result-band {
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan), var(--gold));
+    }
+
+    .result-body { padding: 36px; }
+
+    /* Rank badge */
+    .result-rank {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,166,35,.12);
+      border: 1px solid rgba(245,166,35,.25);
+      color: var(--gold);
+      padding: 5px 14px; border-radius: 50px;
+      font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .result-product-name {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .result-product-sub {
+      font-size: .95rem; color: rgba(255,255,255,.45);
+      margin-bottom: 32px;
+    }
+
+    /* Why this product */
+    .result-why {
+      background: rgba(20,105,181,.1);
+      border: 1px solid rgba(20,105,181,.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .result-why-title {
+      font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 14px;
+    }
+    .result-why-list { list-style: none; }
+    .result-why-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .92rem; color: rgba(255,255,255,.7);
+      padding: 6px 0;
+    }
+    .result-why-list li::before {
+      content: '→';
+      color: var(--cyan); flex-shrink: 0; font-weight: 700;
+    }
+    .result-why-list li strong { color: rgba(255,255,255,.95); }
+
+    /* Specs grid */
+    .result-specs {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 12px; margin-bottom: 32px;
+    }
+    .spec-item {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px; padding: 14px;
+      text-align: center;
+    }
+    .spec-value {
+      font-family: var(--sans); font-weight: 700; font-size: 1.15rem;
+      color: var(--white); margin-bottom: 4px;
+    }
+    .spec-label { font-size: .75rem; color: rgba(255,255,255,.35); }
+
+    /* Score bar */
+    .result-score-row {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 10px;
+    }
+    .result-score-label { font-size: .82rem; color: rgba(255,255,255,.5); min-width: 140px; }
+    .result-score-bar {
+      flex: 1; height: 5px; background: rgba(255,255,255,.08);
+      border-radius: 50px; overflow: hidden;
+    }
+    .result-score-fill {
+      height: 100%; border-radius: 50px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+    }
+    .result-score-val { font-size: .82rem; font-weight: 700; color: var(--cyan); min-width: 30px; text-align: right; }
+
+    .result-price-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.07);
+      margin-top: 28px;
+    }
+    .result-price {
+      font-family: var(--serif);
+      font-size: 2.4rem; color: var(--white);
+      line-height: 1;
+    }
+    .result-price sub {
+      font-family: var(--sans); font-size: .85rem;
+      color: rgba(255,255,255,.4); font-weight: 400;
+      vertical-align: baseline;
+    }
+
+    /* CTA */
+    .result-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--warm), #ff8c42);
+      color: white; padding: 16px 32px; border-radius: 50px;
+      font-weight: 700; font-size: 1rem; cursor: pointer;
+      transition: all .22s var(--ease);
+      text-decoration: none;
+    }
+    .result-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(255,94,58,.35);
+    }
+    .result-cta-arrow { font-size: 1.1rem; transition: transform .2s var(--ease); }
+    .result-cta:hover .result-cta-arrow { transform: translateX(4px); }
+
+    /* Restart */
+    .result-restart {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 20px;
+      font-size: .88rem; color: rgba(255,255,255,.3);
+      cursor: pointer; transition: color .2s;
+    }
+    .result-restart:hover { color: rgba(255,255,255,.6); }
+
+    /* ---- TYPING ANIMATION ---- */
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .typing-cursor {
+      display: inline-block; width: 2px; height: 1em;
+      background: var(--cyan); margin-left: 2px;
+      animation: blink 1s step-end infinite;
+      vertical-align: text-bottom;
+    }
+
+    /* ---- APPEAR ANIMATION ---- */
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(24px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp .55s var(--ease) both; }
+
+    /* ---- MULTI-SELECT CHIPS ---- */
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .criteria-chip {
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 18px;
+      background: rgba(255,255,255,.04);
+      border: 1.5px solid rgba(255,255,255,.09);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all .2s var(--ease);
+      user-select: none;
+    }
+    .criteria-chip:hover {
+      border-color: rgba(0,188,212,.35);
+      background: rgba(0,188,212,.07);
+    }
+    .criteria-chip.selected {
+      border-color: var(--cyan);
+      background: rgba(0,188,212,.13);
+    }
+    .criteria-chip-icon { font-size: 1.1rem; line-height: 1; }
+    .criteria-chip-label {
+      font-size: .9rem; font-weight: 500;
+      color: rgba(255,255,255,.7);
+      transition: color .2s;
+    }
+    .criteria-chip.selected .criteria-chip-label { color: var(--white); }
+    .criteria-chip-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,.2);
+      margin-left: 4px; flex-shrink: 0;
+      transition: all .2s var(--ease);
+    }
+    .criteria-chip.selected .criteria-chip-dot {
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+    .criteria-counter {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .8rem; color: rgba(255,255,255,.35);
+      margin-bottom: 24px; font-style: italic;
+    }
+    .criteria-counter strong { color: var(--cyan); font-style: normal; }
+    .criteria-skip {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .82rem; color: rgba(255,255,255,.28);
+      cursor: pointer; margin-top: 8px;
+      transition: color .2s;
+      text-decoration: underline; text-decoration-color: transparent;
+    }
+    .criteria-skip:hover { color: rgba(255,255,255,.5); text-decoration-color: rgba(255,255,255,.3); }
+
+    /* ---- PRICE CHOICE CARDS ---- */
+    .choices-price {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .choice-price {
+      text-align: center;
+      padding: 22px 14px 18px;
+    }
+    .choice-price .choice-radio { margin: 0 auto 12px; }
+    .price-tier-label {
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.3);
+      margin-bottom: 3px;
+    }
+    .price-tier-value {
+      font-family: var(--serif); font-size: 1.55rem; font-weight: 400;
+      color: var(--white); line-height: 1.1; margin-bottom: 14px;
+    }
+    .choice-price.selected .price-tier-value { color: var(--cyan); }
+    .choice-price .choice-desc {
+      font-size: .78rem; color: rgba(255,255,255,.38);
+      line-height: 1.45;
+    }
+    .choice-price .choice-check { top: 10px; right: 10px; }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 600px) {
+      .choices { grid-template-columns: 1fr 1fr; }
+      .result-specs { grid-template-columns: 1fr 1fr; }
+      .result-price-row { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 400px) {
+      .choices { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-ambient"></div>
+
+<div class="page-wrap">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-logo"><a href="index.html" style="color:inherit;text-decoration:none">Meilleur<span>Clim</span>.com</a></div>
+    <div class="topbar-tag">Guide personnalisé · 2025</div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-label">
+      Votre parcours
+      <span id="progressLabel">Étape 1 sur 4</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="intro-section" id="sectionIntro">
+    <div class="eyebrow">Guide interactif</div>
+    <h1 class="intro-title">
+      Le meilleur climatiseur,<br>
+      <em>c'est le vôtre.</em>
+    </h1>
+    <p class="intro-body">
+      Il n'existe pas de climatiseur universellement parfait — il existe celui qui correspond exactement à <strong>votre logement, vos habitudes et votre budget</strong>.<br><br>
+      Ce guide vous pose les bonnes questions pour vous recommander, en quelques étapes, le modèle le plus adapté à votre situation réelle. Pas de jargon technique, pas de liste interminable : juste la bonne réponse pour vous.
+    </p>
+
+    <!-- START CHECKBOX -->
+    <div class="start-trigger" id="startTrigger" onclick="startGuide()">
+      <div class="checkbox-custom">
+        <span class="checkbox-check">✓</span>
+      </div>
+      <div class="trigger-text">
+        Je veux trouver <span>mon climatiseur idéal</span> — commencer le guide
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 1 — TYPE DE LOGEMENT ===== -->
+  <section class="step-section" id="step1">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-divider"></div>
+      <div class="step-badge">Votre logement</div>
+    </div>
+    <h2 class="step-question">Quel type de logement souhaitez-vous climatiser ?</h2>
+    <p class="step-sub">La configuration du lieu détermine le type et la puissance d'appareil nécessaires.</p>
+
+    <div class="choices" id="choices1">
+      <div class="choice-card" onclick="selectChoice('step1','appart')">
+        <span class="choice-icon">🏢</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Appartement</div>
+        <div class="choice-desc">En étage, mitoyenneté avec voisins</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step1','maison')">
+        <span class="choice-icon">🏠</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Maison individuelle</div>
+        <div class="choice-desc">Plain-pied ou étages, jardin</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step1','bureau')">
+        <span class="choice-icon">💼</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Bureau / local</div>
+        <div class="choice-desc">Espace professionnel ou mixte</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step1','studio')">
+        <span class="choice-icon">🛏️</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Studio / petite surface</div>
+        <div class="choice-desc">Moins de 25 m², une seule pièce</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step1','villa')">
+        <span class="choice-icon">🏡</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Villa / grande surface</div>
+        <div class="choice-desc">Plus de 80 m², plusieurs pièces</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step1','locataire')">
+        <span class="choice-icon">🔑</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Locataire</div>
+        <div class="choice-desc">Pas de percement possible, solution mobile</div>
+        <div class="choice-check">✓</div>
+      </div>
+    </div>
+
+    <div class="step-validate" id="validate1" onclick="validateStep(1)">
+      <div class="validate-checkbox">
+        <span class="validate-check">✓</span>
+      </div>
+      <div class="validate-text">J'ai choisi — <strong>passer à l'étape suivante</strong></div>
+      <div class="validate-arrow">→</div>
+    </div>
+  </section>
+
+  <div class="section-line" id="line1"><div class="section-line-bar"></div><div class="section-line-dot"></div><div class="section-line-bar"></div></div>
+
+  <!-- ===== STEP 2 — USAGE ===== -->
+  <section class="step-section" id="step2">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-divider"></div>
+      <div class="step-badge">Votre usage</div>
+    </div>
+    <h2 class="step-question">Quelle est votre priorité principale ?</h2>
+    <p class="step-sub">Un même appareil peut répondre à des besoins très différents selon comment vous l'utilisez.</p>
+
+    <div class="choices" id="choices2">
+      <div class="choice-card" onclick="selectChoice('step2','froid')">
+        <span class="choice-icon">❄️</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Refroidir l'été</div>
+        <div class="choice-desc">Uniquement pour les chaleurs estivales</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step2','reversible')">
+        <span class="choice-icon">🔁</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Froid + Chauffage</div>
+        <div class="choice-desc">Remplacer ou compléter mon chauffage</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step2','air')">
+        <span class="choice-icon">🌬️</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Qualité de l'air</div>
+        <div class="choice-desc">Allergies, poussières, odeurs</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step2','silence')">
+        <span class="choice-icon">🌙</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Silence absolu</div>
+        <div class="choice-desc">Chambre, bébé, travail concentré</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step2','eco')">
+        <span class="choice-icon">🌿</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Économies d'énergie</div>
+        <div class="choice-desc">Réduire ma facture EDF au maximum</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card" onclick="selectChoice('step2','polyvalent')">
+        <span class="choice-icon">⚡</span>
+        <div class="choice-radio"></div>
+        <div class="choice-label">Polyvalence maximale</div>
+        <div class="choice-desc">Plusieurs usages, toute l'année</div>
+        <div class="choice-check">✓</div>
+      </div>
+    </div>
+
+    <div class="step-validate" id="validate2" onclick="validateStep(2)">
+      <div class="validate-checkbox">
+        <span class="validate-check">✓</span>
+      </div>
+      <div class="validate-text">J'ai choisi — <strong>passer à l'étape suivante</strong></div>
+      <div class="validate-arrow">→</div>
+    </div>
+  </section>
+
+  <div class="section-line" id="line2"><div class="section-line-bar"></div><div class="section-line-dot"></div><div class="section-line-bar"></div></div>
+  <div class="section-line" id="line2b"><div class="section-line-bar"></div><div class="section-line-dot"></div><div class="section-line-bar"></div></div>
+
+  <!-- ===== STEP 2b — CRITÈRES MULTIPLES ===== -->
+  <section class="step-section" id="step2b">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-divider"></div>
+      <div class="step-badge">Critères importants</div>
+    </div>
+    <h2 class="step-question">Quels critères comptent également pour vous ?</h2>
+    <p class="step-sub">Sélectionnez tout ce qui s'applique — plusieurs choix possibles. Ces critères affineront notre recommandation.</p>
+
+    <div class="criteria-counter" id="criteriaCounter">Aucun critère sélectionné — <strong>ou passez directement</strong></div>
+
+    <div class="criteria-grid" id="criteriaGrid">
+      <div class="criteria-chip" onclick="toggleCriteria('eco')">
+        <span class="criteria-chip-icon">🌿</span>
+        <span class="criteria-chip-label">Écologique / A+++</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('wifi')">
+        <span class="criteria-chip-icon">📱</span>
+        <span class="criteria-chip-label">Pilotage Wi-Fi / appli</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('installation_facile')">
+        <span class="criteria-chip-icon">🔌</span>
+        <span class="criteria-chip-label">Sans installation pro</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('silence')">
+        <span class="criteria-chip-icon">🌙</span>
+        <span class="criteria-chip-label">Ultra-silencieux</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('filtration')">
+        <span class="criteria-chip-icon">🫁</span>
+        <span class="criteria-chip-label">Filtration de l'air</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('design')">
+        <span class="criteria-chip-icon">🎨</span>
+        <span class="criteria-chip-label">Design soigné</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('garantie')">
+        <span class="criteria-chip-icon">🛡️</span>
+        <span class="criteria-chip-label">Longue garantie</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+      <div class="criteria-chip" onclick="toggleCriteria('domotique')">
+        <span class="criteria-chip-icon">🏡</span>
+        <span class="criteria-chip-label">Compatible domotique</span>
+        <span class="criteria-chip-dot"></span>
+      </div>
+    </div>
+
+    <div class="criteria-skip" onclick="skipCriteria()">↪ Aucun critère supplémentaire — passer au budget</div>
+
+    <div class="step-validate" id="validate2b" onclick="validateStep('2b')" style="margin-top:28px">
+      <div class="validate-checkbox">
+        <span class="validate-check">✓</span>
+      </div>
+      <div class="validate-text">Confirmer mes critères — <strong>passer au budget</strong></div>
+      <div class="validate-arrow">→</div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 3 — BUDGET ===== -->
+  <section class="step-section" id="step3">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div class="step-divider"></div>
+      <div class="step-badge">Votre budget</div>
+    </div>
+    <h2 class="step-question">Quel budget global envisagez-vous ?</h2>
+    <p class="step-sub">Budget total = appareil + installation professionnelle (obligatoire pour un split).</p>
+
+    <div class="choices choices-price" id="choices3">
+      <div class="choice-card choice-price" onclick="selectChoice('step3','petit')">
+        <div class="price-tier-label">Max</div>
+        <div class="price-tier-value">600 €</div>
+        <div class="choice-radio"></div>
+        <div class="choice-desc">Ventilateur ou portable — sans installation requise</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card choice-price" onclick="selectChoice('step3','p1200')">
+        <div class="price-tier-label">Max</div>
+        <div class="price-tier-value">1 200 €</div>
+        <div class="choice-radio"></div>
+        <div class="choice-desc">Split entrée de gamme + installation standard</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card choice-price" onclick="selectChoice('step3','moyen')">
+        <div class="price-tier-label">Max</div>
+        <div class="price-tier-value">1 800 €</div>
+        <div class="choice-radio"></div>
+        <div class="choice-desc">Split milieu de gamme A++ + pose soignée</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card choice-price" onclick="selectChoice('step3','confort')">
+        <div class="price-tier-label">Max</div>
+        <div class="price-tier-value">2 400 €</div>
+        <div class="choice-radio"></div>
+        <div class="choice-desc">Split premium A+++ + installation haute qualité</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card choice-price" onclick="selectChoice('step3','premium')">
+        <div class="price-tier-label">Max</div>
+        <div class="price-tier-value">3 000 €</div>
+        <div class="choice-radio"></div>
+        <div class="choice-desc">Bi-split ou modèle haut de gamme grande surface</div>
+        <div class="choice-check">✓</div>
+      </div>
+      <div class="choice-card choice-price" onclick="selectChoice('step3','luxe')">
+        <div class="price-tier-label">Budget</div>
+        <div class="price-tier-value">3 000 € +</div>
+        <div class="choice-radio"></div>
+        <div class="choice-desc">Multi-split, solution sur mesure, pas de limite</div>
+        <div class="choice-check">✓</div>
+      </div>
+    </div>
+
+    <div class="step-validate" id="validate3" onclick="validateStep(3)">
+      <div class="validate-checkbox">
+        <span class="validate-check">✓</span>
+      </div>
+      <div class="validate-text">J'ai choisi — <strong>voir ma recommandation personnalisée</strong></div>
+      <div class="validate-arrow">→</div>
+    </div>
+  </section>
+
+  <div class="section-line" id="line3"><div class="section-line-bar"></div><div class="section-line-dot"></div><div class="section-line-bar"></div></div>
+  <div class="section-line" id="line-result"><div class="section-line-bar"></div><div class="section-line-dot"></div><div class="section-line-bar"></div></div>
+
+  <!-- ===== RESULT ===== -->
+  <section class="result-section" id="sectionResult">
+    <div class="result-eyebrow">Notre recommandation</div>
+
+    <div class="result-card">
+      <div class="result-band"></div>
+      <div class="result-body">
+        <div class="result-rank" id="resultRank">🏆 Meilleur choix pour vous</div>
+        <h2 class="result-product-name" id="resultName">—</h2>
+        <p class="result-product-sub" id="resultSub">—</p>
+
+        <!-- Why block -->
+        <div class="result-why">
+          <div class="result-why-title">Pourquoi ce modèle pour vous ?</div>
+          <ul class="result-why-list" id="resultWhyList"></ul>
+        </div>
+
+        <!-- Specs -->
+        <div class="result-specs" id="resultSpecs"></div>
+
+        <!-- Score bars -->
+        <div id="resultScores" style="margin-bottom:20px"></div>
+
+        <!-- Price + CTA -->
+        <div class="result-price-row">
+          <div>
+            <div style="font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:6px">Prix indicatif</div>
+            <div class="result-price" id="resultPrice">—</div>
+          </div>
+          <a href="#" class="result-cta" id="resultCta" rel="nofollow sponsored">
+            Voir le meilleur prix <span class="result-cta-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Restart -->
+    <div class="result-restart" onclick="restartGuide()">
+      ↺ Recommencer avec d'autres réponses
+    </div>
+
+  </section>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ============================================================
+//  STATE
+// ============================================================
+const state = {
+  step1: null,
+  step2: null,
+  step2b: [],   // multi-select
+  step3: null,
+  currentStep: 0,
+  started: false
+};
+
+// ============================================================
+//  PRODUCT DATABASE
+// ============================================================
+const products = {
+  // studio + froid/air/silence + petit
+  studio_froid_petit:     { name: "De'Longhi Pinguino CFP9", sub: "Rafraîchisseur évaporation portable — Aucune installation requise", price: "289 €", rank: "🥇 Meilleur choix sans installation", specs:[{v:"450 m³/h",l:"Débit air"},{v:"65 W",l:"Conso max"},{v:"–4°C",l:"Ressenti"}], scores:[{l:"Facilité d'usage",v:98},{l:"Silence",v:85},{l:"Effet frais",v:78}], why:["<strong>Pas d'installation ni de percement</strong> nécessaires — parfait en appartement locataire","Taille compacte adaptée à votre <strong>petite surface</strong>","Budget maîtrisé, résultat immédiat dès le branchement","Réservoir 9L pour une nuit complète sans recharge"] },
+  studio_silence_petit:   { name: "Dyson Pure Cool TP07", sub: "Ventilateur tour sans pales + purificateur HEPA 13 — Wi-Fi intégré", price: "499 €", rank: "🌙 Parfait pour le silence nocturne", specs:[{v:"38 dB",l:"Bruit min"},{v:"40 W",l:"Conso"},{v:"HEPA 13",l:"Filtre"}], scores:[{l:"Silence",v:99},{l:"Qualité air",v:98},{l:"Facilité",v:92}], why:["<strong>38 dB</strong> en mode nuit — inaudible dans une chambre","Sans pales : 100% sécurisé pour un studio avec enfant ou animal","Filtre HEPA 13 : élimine 99,97% des allergènes et particules","Télécommande magnétique + minuterie automatique"] },
+  studio_air_petit:       { name: "Dyson Pure Cool TP07", sub: "Ventilateur tour sans pales + purificateur HEPA 13 — Wi-Fi intégré", price: "499 €", rank: "🌬️ N°1 qualité de l'air", specs:[{v:"HEPA 13",l:"Filtre"},{v:"PM0.1",l:"Particules"},{v:"38 dB",l:"Bruit min"}], scores:[{l:"Qualité air",v:99},{l:"Silence",v:98},{l:"Facilité",v:92}], why:["<strong>Filtre HEPA 13</strong> : capte virus, bactéries, allergènes, PM0.1","Idéal en studio : purifie toute la surface en continu","Capteurs en temps réel affichés dans l'appli Dyson","Adaptable à votre budget, pas d'installation requise"] },
+
+  // appart/studio + froid/reversible + moyen
+  appart_froid_moyen:     { name: "Toshiba Haori RAS-B13J2KVRG", sub: "Climatiseur réversible monosplit 3,5 kW — Wi-Fi intégré — Design façade tissu", price: "579 € + pose", rank: "🥇 Meilleur rapport qualité-prix", specs:[{v:"3,5 kW",l:"Puissance"},{v:"21 dB",l:"Bruit min"},{v:"A++",l:"Classe"}], scores:[{l:"Performance",v:86},{l:"Silence",v:88},{l:"Qualité/prix",v:96}], why:["<strong>Wi-Fi intégré</strong> de série — pilotage à distance inclus","Idéal pour un <strong>appartement jusqu'à 35 m²</strong>","Design façade tissu : discret et facile à intégrer","Budget total réaliste avec une installation standard"] },
+  appart_reversible_moyen:{ name: "Mitsubishi Electric MSZ-AP25VGK", sub: "Climatiseur réversible 2,5 kW — Classe A+++ — Hyper-Heating jusqu'à −25°C", price: "699 € + pose", rank: "🔁 Meilleur réversible milieu de gamme", specs:[{v:"2,5 kW",l:"Puissance"},{v:"A+++",l:"Classe"},{v:"7 ans",l:"Garantie"}], scores:[{l:"Efficacité énergie",v:94},{l:"Chauffage hiver",v:95},{l:"Fiabilité",v:97}], why:["<strong>Hyper-Heating</strong> : chauffe efficacement même par −25°C","Classe A+++ en chaud ET froid — facture réduite toute l'année","<strong>Garantie 7 ans pièces</strong> — la meilleure durabilité de sa gamme","Réseau SAV Mitsubishi très dense en France"] },
+  appart_silence_moyen:   { name: "Daikin Perfera FTXM25R", sub: "Climatiseur réversible monosplit 2,5 kW — 19 dB — Classe A+++ — Flash Streamer", price: "749 € + pose", rank: "🌙 N°1 pour le silence en appartement", specs:[{v:"19 dB",l:"Bruit min"},{v:"A+++",l:"Classe"},{v:"SEER 8.65",l:"Efficacité"}], scores:[{l:"Silence",v:97},{l:"Performance",v:95},{l:"Qualité air",v:92}], why:["<strong>19 dB</strong> en mode nuit : imperceptible, même chambre ouverte","Technologie Inverter : modulation fine évitant tout à-coup sonore","Flash Streamer : décompose virus, moisissures, odeurs","Le climatiseur silencieux de référence en appartement"] },
+  appart_air_moyen:       { name: "Daikin Perfera FTXM25R", sub: "Climatiseur réversible 2,5 kW — Flash Streamer — A+++ — 19 dB", price: "749 € + pose", rank: "🌬️ Meilleur pour la qualité de l'air", specs:[{v:"Flash Streamer",l:"Filtre"},{v:"19 dB",l:"Bruit"},{v:"A+++",l:"Classe"}], scores:[{l:"Qualité air",v:94},{l:"Silence",v:97},{l:"Efficacité",v:96}], why:["<strong>Flash Streamer</strong> : ionisation active décomposant allergènes et COV","Filtre double action (poussières + odeurs) nettoyable","Classe A+++ : refroidit et chauffe avec une consommation minimale","19 dB en mode silence pour les nuits sans compromis"] },
+
+  // maison + tout usage + confort
+  maison_froid_confort:   { name: "Daikin Perfera FTXM25R", sub: "Climatiseur réversible 2,5 kW — Classe A+++ — SEER 8.65 — Le meilleur de l'année", price: "749 € + pose", rank: "🏆 Référence absolue 2025", specs:[{v:"SEER 8.65",l:"Efficacité"},{v:"19 dB",l:"Bruit min"},{v:"5 ans",l:"Garantie"}], scores:[{l:"Performance",v:95},{l:"Efficacité énergie",v:97},{l:"Silence",v:96}], why:["<strong>SEER 8.65</strong> : le meilleur ratio consommation/performance du marché","En maison avec bonne isolation, rentabilisé en 2 étés","Flash Streamer + technologie Inverter de précision","Compatible avec les systèmes domotique et assistants vocaux (option)"] },
+  maison_reversible_confort:{ name: "Panasonic Etherea CS-Z25ZKEW", sub: "Climatiseur réversible 2,5 kW — SEER 9.0 — SCOP 5.2 — 18 dB — Wi-Fi natif", price: "799 € + pose", rank: "🌿 Meilleur éco-performant 2025", specs:[{v:"SEER 9.0",l:"Efficacité"},{v:"18 dB",l:"Bruit min"},{v:"SCOP 5.2",l:"Chauffage"}], scores:[{l:"Efficacité froid",v:99},{l:"Efficacité chaud",v:97},{l:"Silence",v:98}], why:["<strong>SEER 9.0</strong> inégalé : économise 200 € d'électricité sur 10 ans vs A+","<strong>SCOP 5.2</strong> : remplace avantageusement le chauffage électrique l'hiver","18 dB : le plus silencieux de notre sélection","Wi-Fi intégré + Google Home + Alexa de série"] },
+  maison_silence_confort: { name: "Panasonic Etherea CS-Z25ZKEW", sub: "Climatiseur réversible 2,5 kW — 18 dB minimum — SEER 9.0 — Wi-Fi natif", price: "799 € + pose", rank: "🌙 Le plus silencieux du marché", specs:[{v:"18 dB",l:"Bruit min"},{v:"SEER 9.0",l:"Efficacité"},{v:"A+++",l:"Classe"}], scores:[{l:"Silence",v:99},{l:"Efficacité",v:99},{l:"Qualité air",v:90}], why:["<strong>18 dB</strong> minimum — record absolu dans notre base de tests","Maison individuelle : unité extérieure éloignable jusqu'à 20 m","nanoe-X : ionisation pour purifier l'air en continu","Wi-Fi intégré : extinction automatique depuis le lit"] },
+  maison_air_confort:     { name: "Panasonic Etherea CS-Z25ZKEW", sub: "Climatiseur réversible 2,5 kW — Technologie nanoe-X — SEER 9.0 — 18 dB", price: "799 € + pose", rank: "🌿 Purification d'air + performance", specs:[{v:"nanoe-X",l:"Purification"},{v:"18 dB",l:"Bruit min"},{v:"A+++",l:"Classe"}], scores:[{l:"Qualité air",v:97},{l:"Silence",v:99},{l:"Efficacité",v:99}], why:["<strong>nanoe-X</strong> : technologie Panasonic ionisant l'air pour détruire allergènes et virus","Idéal maison avec animaux, enfants allergiques ou asthmatiques","SEER 9.0 : le bilan carbone le plus bas de notre sélection","Fonctionnement 24h/24 possible grâce au bruit plancher de 18 dB"] },
+
+  // bureau + tout + moyen/confort
+  bureau_froid_moyen:     { name: "Mitsubishi Electric MSZ-AP25VGK", sub: "Climatiseur réversible 2,5 kW — Classe A+++ — SAV professionnel — Garantie 7 ans", price: "699 € + pose", rank: "💼 Meilleur pour usage professionnel", specs:[{v:"A+++",l:"Classe"},{v:"7 ans",l:"Garantie"},{v:"21 dB",l:"Bruit min"}], scores:[{l:"Fiabilité",v:98},{l:"Performance",v:93},{l:"SAV",v:97}], why:["<strong>Garantie 7 ans pièces</strong> — tranquillité d'esprit en environnement pro","Réseau SAV Mitsubishi : techniciens certifiés dans toute la France","Mode programmation hebdomadaire pour couper automatiquement le week-end","Classe A+++ : réduction significative du poste énergie du local"] },
+  bureau_silence_moyen:   { name: "Daikin Perfera FTXM25R", sub: "Climatiseur réversible 2,5 kW — 19 dB — Flash Streamer — Ideal pour open-space", price: "749 € + pose", rank: "🌙 Silence professionnel", specs:[{v:"19 dB",l:"Bruit min"},{v:"A+++",l:"Classe"},{v:"SEER 8.65",l:"Efficacité"}], scores:[{l:"Silence",v:97},{l:"Performance",v:95},{l:"Qualité air",v:92}], why:["<strong>19 dB</strong> en mode silence : confort acoustique pour la concentration","Flash Streamer : améliore la qualité de l'air en open-space","Programmation horaire précise adaptée aux horaires bureau","Compatible avec les systèmes de GTB professionnels (BACnet)"] },
+
+  // petit budget — universel
+  default_petit:          { name: "Rowenta Turbo Silence Extreme+ VU6670", sub: "Ventilateur colonne 5 vitesses — Mode Turbo Boost — Télécommande — 40 dB", price: "89 €", rank: "💰 Meilleur rapport qualité-prix absolu", specs:[{v:"380 m³/h",l:"Débit"},{v:"40 dB",l:"Bruit min"},{v:"50 W",l:"Conso"}], scores:[{l:"Qualité/prix",v:97},{l:"Facilité",v:96},{l:"Silence",v:88}], why:["<strong>Aucune installation</strong> — branchement direct, prêt en 30 secondes","Télécommande incluse pour ajuster sans se lever","5 vitesses + Turbo Boost pour ventiler instantanément une pièce","89 € : impossible de trouver mieux à ce prix pour ce débit d'air"] },
+
+  // premium
+  default_premium:        { name: "Daikin Multi+ FTXM50R (bi-split)", sub: "Système bi-split 5 kW — 2 pièces simultanément — SEER 8.5 — A+++", price: "1 800 € + pose", rank: "💎 Solution multi-pièces premium", specs:[{v:"5 kW",l:"Puissance totale"},{v:"2 pièces",l:"Couverture"},{v:"A+++",l:"Classe"}], scores:[{l:"Couverture",v:100},{l:"Efficacité",v:95},{l:"Confort",v:98}], why:["<strong>2 unités intérieures</strong> pour couvrir salon + chambre simultanément","Une seule unité extérieure : installation plus simple, impact façade réduit","Gestion indépendante de chaque pièce depuis l'application","Solution idéale pour maisons de 80 à 120 m²"] },
+};
+
+// ============================================================
+//  LOGIC
+// ============================================================
+function getProductKey() {
+  // Boost priority based on multi-select criteria
+  let s2 = state.step2;
+  const c = state.step2b;
+  // If user picked criteria that override or reinforce their priority
+  if (c.includes('eco') && s2 !== 'reversible') s2 = 'reversible'; // eco pushes to reversible/best SEER
+  if (c.includes('silence') && !c.includes('eco')) s2 = 'silence';
+  if (c.includes('filtration') && s2 === 'froid') s2 = 'air';
+  if (c.includes('installation_facile')) {
+    // force small budget / portable if they want no pro install
+    return state.step3 === 'petit' ? 'default_petit' : 'studio_froid_petit';
+  }
+  const s1 = state.step1;
+  // s2 already set above (possibly boosted)
+  const s3 = state.step3;
+
+  if (s3 === 'premium') return 'default_premium';
+  if (s3 === 'petit')   return (s2 === 'silence' || s2 === 'air') ? 'studio_' + s2 + '_petit' : 'default_petit';
+
+  const budget = (s3 === 'moyen') ? 'moyen' : 'confort';
+  const type   = (s1 === 'studio') ? 'appart' : s1;
+
+  const key = type + '_' + s2 + '_' + budget;
+  return products[key] ? key : (type + '_froid_' + budget);
+}
+
+function selectChoice(step, value) {
+  state[step] = value;
+  // Visual
+  document.querySelectorAll(`#choices${step.slice(-1)} .choice-card`).forEach(c => c.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+  // Activate validate button
+  const validateEl = document.getElementById('validate' + step.slice(-1));
+  validateEl.classList.add('active');
+}
+
+function validateStep(num) {
+  const validate = document.getElementById('validate' + num);
+  if (!validate.classList.contains('active') || validate.classList.contains('done')) return;
+  validate.classList.add('done');
+
+  if (num === 1) {
+    updateProgress(1);
+    setTimeout(() => {
+      document.getElementById('line1').classList.add('visible');
+      setTimeout(() => {
+        const s2 = document.getElementById('step2');
+        s2.classList.add('visible');
+        s2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }, 300);
+  } else if (num === 2) {
+    updateProgress(2);
+    setTimeout(() => {
+      document.getElementById('line2').classList.add('visible');
+      setTimeout(() => {
+        document.getElementById('line2b').classList.add('visible');
+        setTimeout(() => {
+          const s2b = document.getElementById('step2b');
+          s2b.classList.add('visible');
+          s2b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }, 200);
+    }, 300);
+  } else if (num === '2b') {
+    updateProgress(3);
+    setTimeout(() => {
+      const nextLine = document.getElementById('line3') || document.querySelector('[id="line2"]');
+      // find the line before step3
+      const stepSection = document.getElementById('step3');
+      const allLines = document.querySelectorAll('.section-line');
+      // show the line just before step3 which is line3 in the DOM
+      if (document.getElementById('line3')) document.getElementById('line3').classList.add('visible');
+      setTimeout(() => {
+        stepSection.classList.add('visible');
+        stepSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }, 300);
+  } else if (num === 3) {
+    updateProgress(4);
+    const resultLine = document.getElementById('line-result');
+    setTimeout(() => {
+      if (resultLine) resultLine.classList.add('visible');
+      setTimeout(() => buildResult(), 200);
+    }, 300);
+  }
+}
+
+function startGuide() {
+  const trigger = document.getElementById('startTrigger');
+  if (trigger.classList.contains('checked')) return;
+  trigger.classList.add('checked');
+  state.started = true;
+
+  // Show progress
+  const pw = document.getElementById('progressWrap');
+  pw.classList.add('visible');
+  updateProgress(0);
+
+  // Show step 1 after delay
+  setTimeout(() => {
+    const s1 = document.getElementById('step1');
+    s1.classList.add('visible');
+    s1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 500);
+}
+
+function updateProgress(step) {
+  const pct = [0, 20, 40, 60, 80, 100];
+  const labels = ['', 'Étape 1 sur 4', 'Étape 2 sur 4', 'Étape 3 sur 4', 'Étape 4 sur 4', 'Recommandation prête'];
+  document.getElementById('progressFill').style.width = pct[step] + '%';
+  document.getElementById('progressLabel').textContent = labels[step];
+}
+
+function buildResult() {
+  const key = getProductKey();
+  const fallback = products['default_petit'];
+  const p = products[key] || fallback;
+
+  document.getElementById('resultRank').textContent = p.rank;
+  document.getElementById('resultName').textContent = p.name;
+  document.getElementById('resultSub').textContent  = p.sub;
+  document.getElementById('resultPrice').innerHTML  = p.price + ' <sub>prix indicatif</sub>';
+
+  // Why list — add criteria-specific context
+  const c = state.step2b;
+  let extraWhy = [];
+  if (c.includes('eco')) extraWhy.push("Vos <strong>critères écologiques</strong> : ce modèle est parmi les plus économes en énergie (A+++ ou SEER élevé)");
+  if (c.includes('wifi')) extraWhy.push("Pilotage <strong>Wi-Fi</strong> : compatible avec l'application mobile pour un contrôle à distance");
+  if (c.includes('garantie')) extraWhy.push("<strong>Durabilité</strong> : ce modèle bénéficie d'une des meilleures garanties de sa catégorie");
+  if (c.includes('domotique')) extraWhy.push("<strong>Domotique</strong> : compatible Google Home et Amazon Alexa pour intégration à votre maison connectée");
+  if (c.includes('design')) extraWhy.push("<strong>Design</strong> : façade soignée pensée pour s'intégrer discrètement dans votre intérieur");
+  if (c.includes('filtration')) extraWhy.push("Filtration de l'air : ce modèle dispose d'un <strong>système de filtration avancé</strong> pour purifier l'air ambiant");
+  const whyEl = document.getElementById('resultWhyList');
+  whyEl.innerHTML = [...p.why, ...extraWhy].map(w => `<li>${w}</li>`).join('');
+
+  // Specs
+  const specsEl = document.getElementById('resultSpecs');
+  specsEl.innerHTML = p.specs.map(s => `
+    <div class="spec-item">
+      <div class="spec-value">${s.v}</div>
+      <div class="spec-label">${s.l}</div>
+    </div>`).join('');
+
+  // Scores
+  const scoresEl = document.getElementById('resultScores');
+  scoresEl.innerHTML = p.scores.map(s => `
+    <div class="result-score-row">
+      <div class="result-score-label">${s.l}</div>
+      <div class="result-score-bar">
+        <div class="result-score-fill" style="width:0%" data-target="${s.v}%"></div>
+      </div>
+      <div class="result-score-val">${s.v}</div>
+    </div>`).join('');
+
+  // Show result section
+  const resultSection = document.getElementById('sectionResult');
+  resultSection.classList.add('visible');
+  setTimeout(() => {
+    resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Animate bars after reveal
+    setTimeout(() => {
+      document.querySelectorAll('.result-score-fill').forEach(bar => {
+        bar.style.transition = 'width .9s cubic-bezier(.4,0,.2,1)';
+        bar.style.width = bar.dataset.target;
+      });
+    }, 400);
+  }, 100);
+
+  updateProgress(4);
+}
+
+
+function toggleCriteria(value) {
+  const idx = state.step2b.indexOf(value);
+  if (idx === -1) {
+    state.step2b.push(value);
+  } else {
+    state.step2b.splice(idx, 1);
+  }
+  // Toggle chip visual
+  document.querySelectorAll('#criteriaGrid .criteria-chip').forEach(chip => {
+    const fn = chip.getAttribute('onclick');
+    const v = fn.match(/\'(.*?)\'/)?.[1];
+    if (v === value) chip.classList.toggle('selected', state.step2b.includes(value));
+  });
+  // Update counter
+  const counter = document.getElementById('criteriaCounter');
+  const n = state.step2b.length;
+  counter.innerHTML = n === 0
+    ? 'Aucun critère sélectionné — <strong>ou passez directement</strong>'
+    : `<strong>${n} critère${n>1?'s':''} sélectionné${n>1?'s':''}</strong> — vous pouvez en ajouter d'autres`;
+  // Enable validate
+  const v2b = document.getElementById('validate2b');
+  v2b.classList.add('active');
+}
+
+function skipCriteria() {
+  state.step2b = [];
+  const v2b = document.getElementById('validate2b');
+  v2b.classList.add('active');
+  validateStep('2b');
+}
+
+function restartGuide() {
+  // Reset state
+  state.step1 = null; state.step2 = null; state.step2b = []; state.step3 = null;
+  state.started = false;
+
+  // Reset UI
+  document.getElementById('startTrigger').classList.remove('checked');
+  ['step1','step2','step2b','step3'].forEach(id => {
+    document.getElementById(id).classList.remove('visible');
+    document.querySelectorAll(`#${id} .choice-card`).forEach(c => c.classList.remove('selected'));
+    const num = id === 'step2b' ? '2b' : id.slice(-1);
+    const v = document.getElementById('validate' + num);
+    if (v) v.classList.remove('active','done');
+    if (id === 'step2b') {
+      document.querySelectorAll('#criteriaGrid .criteria-chip').forEach(c => c.classList.remove('selected'));
+      const counter = document.getElementById('criteriaCounter');
+      if (counter) counter.innerHTML = 'Aucun critère sélectionné — <strong>ou passez directement</strong>';
+    }
+  });
+  ['line1','line2','line2b','line3'].forEach(id => { const el = document.getElementById(id); if(el) el.classList.remove('visible'); });
+  document.getElementById('sectionResult').classList.remove('visible');
+  document.getElementById('progressWrap').classList.remove('visible');
+  updateProgress(0);
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
