@@ -5,7 +5,7 @@ const NAV_HTML = `
   <nav class="container">
     <a href="index.html" class="logo">
       <div class="logo-icon">❄️</div>
-      Meilleur<span>Clim</span>.com
+      Meilleur<span>CV</span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
@@ -14,7 +14,7 @@ const NAV_HTML = `
         <ul class="dropdown-menu">
           <li><a href="top3-climatiseurs.html">❄️ Meilleurs climatiseurs</a></li>
           <li><a href="top3-ventilateurs.html">💨 Meilleurs ventilateurs</a></li>
-          <li><a href="top3-climatiseurs-ecologiques.html">🌿 Climatiseurs écologiques</a></li>
+          <li><a href="top3-climatiseurs-ecologiques.html">🌿 Meilleurs climatiseurs écologiques</a></li>
         </ul>
       </li>
       <li><a href="blog.html">Blog</a></li>
@@ -39,7 +39,7 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">Meilleur<span>Clim</span>.com</div>
+        <div class="footer-logo">Meilleur<span>CV</span></div>
         <p class="footer-desc">Le guide indépendant pour choisir votre climatiseur ou ventilateur. Comparatifs, tests et conseils d'experts.</p>
         <div style="display:flex;gap:12px">
           <a href="#" style="color:rgba(255,255,255,0.5);font-size:1.2rem;transition:color 0.2s" onmouseover="this.style.color='#00c9b1'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">𝕏</a>
@@ -50,8 +50,8 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Top Produits</h4>
         <ul>
-          <li><a href="top3.html">Meilleur climatiseur 2025</a></li>
-          <li><a href="top3.html">Meilleur ventilateur 2025</a></li>
+          <li><a href="top3.html">Meilleur climatiseur 2026</a></li>
+          <li><a href="top3.html">Meilleur ventilateur 2026</a></li>
           <li><a href="top3.html">Climatiseur portable</a></li>
           <li><a href="top3.html">Ventilateur sans pales</a></li>
         </ul>
@@ -76,7 +76,7 @@ const FOOTER_HTML = `
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 meilleur-climatiseur-ventilateur.com — Tous droits réservés</p>
+      <p>© 2026 meilleur-climatiseur-ventilateur.com — Tous droits réservés</p>
       <div class="footer-links">
         <a href="#">Mentions légales</a>
         <a href="#">CGU</a>
