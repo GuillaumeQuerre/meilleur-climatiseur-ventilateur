@@ -3,35 +3,33 @@
 const NAV_HTML = `
 <header>
   <nav class="container menu">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <div class="logo-icon">❄️</div>
       M<span>C</span>V
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="/">Accueil</a></li>
       <li class="nav-dropdown">
         <a href="#" class="nav-dropdown-toggle">Top Produits ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="top3-climatiseurs.html">❄️ Meilleurs climatiseurs</a></li>
-          <li><a href="top3-ventilateurs.html">💨 Meilleurs ventilateurs</a></li>
-          <li><a href="top3-climatiseurs-ecologiques.html">🌿 Meilleurs climatiseurs écologiques</a></li>
+          <li><a href="/top3-climatiseurs.html">❄️ Meilleurs climatiseurs</a></li>
+          <li><a href="/top3-ventilateurs.html">💨 Meilleurs ventilateurs</a></li>
+          <li><a href="/top3-climatiseurs-ecologiques.html">🌿 Meilleurs climatiseurs écologiques</a></li>
         </ul>
       </li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="top3-climatiseurs.html" class="nav-cta">Voir les Tops →</a></li>
-      <li><a href="climatiseur-ventilateur-ideal/" class="nav-cta" style="background:linear-gradient(135deg,var(--warm),#ff8240)">🎯 Trouver mon clim →</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/top3-climatiseurs.html" class="nav-cta">Voir les Tops →</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
-    <li><a href="top3-climatiseurs.html" onclick="toggleMenu()">❄️ Meilleurs climatiseurs</a></li>
-    <li><a href="top3-ventilateurs.html" onclick="toggleMenu()">💨 Meilleurs ventilateurs</a></li>
-    <li><a href="top3-climatiseurs-ecologiques.html" onclick="toggleMenu()">🌿 Climatiseurs écologiques</a></li>
-    <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
-    <li><a href="climatiseur-ventilateur-ideal/" onclick="toggleMenu()">🎯 Trouver mon climatiseur idéal</a></li>
+    <li><a href="/" onclick="toggleMenu()">Accueil</a></li>
+    <li><a href="/top3-climatiseurs.html" onclick="toggleMenu()">❄️ Meilleurs climatiseurs</a></li>
+    <li><a href="/top3-ventilateurs.html" onclick="toggleMenu()">💨 Meilleurs ventilateurs</a></li>
+    <li><a href="/top3-climatiseurs-ecologiques.html" onclick="toggleMenu()">🌿 Climatiseurs écologiques</a></li>
+    <li><a href="/blog.html" onclick="toggleMenu()">Blog</a></li>
   </ul>
 </div>
 `;
@@ -52,20 +50,19 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Top Produits</h4>
         <ul>
-          <li><a href="top3.html">Meilleur climatiseur 2026</a></li>
-          <li><a href="top3.html">Meilleur ventilateur 2026</a></li>
-          <li><a href="top3.html">Climatiseur portable</a></li>
-          <li><a href="top3.html">Ventilateur sans pales</a></li>
+          <li><a href="/top3.html">Meilleur climatiseur 2026</a></li>
+          <li><a href="/top3.html">Meilleur ventilateur 2026</a></li>
+          <li><a href="/top3.html">Climatiseur portable</a></li>
+          <li><a href="/top3.html">Ventilateur sans pales</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Blog & Guides</h4>
         <ul>
-          <li><a href="blog.html">Tous les articles</a></li>
-          <li><a href="climatiseur-ventilateur-ideal/">🎯 Guide personnalisé</a></li>
-          <li><a href="article.html">Conseils d'achat</a></li>
-          <li><a href="article.html">Installation</a></li>
-          <li><a href="article.html">Économies d'énergie</a></li>
+          <li><a href="/blog.html">Tous les articles</a></li>
+          <li><a href="/articles/">Conseils d'achat</a></li>
+          <li><a href="/articles/">Installation</a></li>
+          <li><a href="/articles/">Économies d'énergie</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -138,9 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.insertAdjacentHTML('beforeend', FOOTER_HTML);
 
   // Highlight active nav link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-links a').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
       link.classList.add('active');
     }
   });

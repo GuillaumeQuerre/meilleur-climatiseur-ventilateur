@@ -77,11 +77,27 @@ nav {
 }
 .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 .nav-cta {
-  background: var(--accent); color: var(--white) !important;
   padding: 8px 20px; border-radius: 50px;
-  font-weight: 600 !important; transition: background var(--transition) !important;
+  font-weight: 600 !important;
+  transition: all var(--transition) !important;
 }
-.nav-cta:hover { background: var(--primary) !important; }
+.nav-cta-primary {
+  background: var(--accent); color: var(--white) !important;
+}
+.nav-cta-primary:hover {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  transform: translateY(-1px);
+}
+.nav-cta-warm {
+  background: linear-gradient(135deg, #ff5e3a, #ff8240);
+  color: var(--white) !important;
+}
+.nav-cta-warm:hover {
+  background: linear-gradient(135deg, #e84e2a, #f07230) !important;
+  color: var(--white) !important;
+  transform: translateY(-1px);
+}
 .hamburger { display: none; cursor: pointer; font-size: 1.5rem; color: var(--primary); }
 
 /* ===== BUTTONS ===== */
