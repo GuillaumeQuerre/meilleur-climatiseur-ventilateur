@@ -45,7 +45,7 @@ p { font-size: 1.05rem; }
 .section-sm { padding: 48px 0; }
 
 /* ===== HEADER / NAV ===== */
-header .menu {
+.menu {
   position: sticky; top: 0; z-index: 100;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
