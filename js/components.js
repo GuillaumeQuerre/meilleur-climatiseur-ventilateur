@@ -19,6 +19,7 @@ const NAV_HTML = `
       </li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="top3-climatiseurs.html" class="nav-cta">Voir les Tops →</a></li>
+      <li><a href="climatiseur-ventilateur-ideal/" class="nav-cta" style="background:linear-gradient(135deg,var(--warm),#ff8240)">🎯 Trouver mon clim →</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
@@ -30,6 +31,7 @@ const NAV_HTML = `
     <li><a href="top3-ventilateurs.html" onclick="toggleMenu()">💨 Meilleurs ventilateurs</a></li>
     <li><a href="top3-climatiseurs-ecologiques.html" onclick="toggleMenu()">🌿 Climatiseurs écologiques</a></li>
     <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+    <li><a href="climatiseur-ventilateur-ideal/" onclick="toggleMenu()">🎯 Trouver mon climatiseur idéal</a></li>
   </ul>
 </div>
 `;
@@ -60,6 +62,7 @@ const FOOTER_HTML = `
         <h4>Blog & Guides</h4>
         <ul>
           <li><a href="blog.html">Tous les articles</a></li>
+          <li><a href="climatiseur-ventilateur-ideal/">🎯 Guide personnalisé</a></li>
           <li><a href="article.html">Conseils d'achat</a></li>
           <li><a href="article.html">Installation</a></li>
           <li><a href="article.html">Économies d'énergie</a></li>
