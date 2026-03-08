@@ -130,6 +130,89 @@
       .product-mini { flex-direction: column; }
       .product-mini-price { text-align: left; }
     }
+
+    /* ── FOCUS MODE ─────────────────────────────────────────── */
+
+    /* Overlay de blur sur tout le reste de la page */
+    .focus-overlay {
+      position: fixed; inset: 0; z-index: 50;
+      backdrop-filter: blur(6px) brightness(0.55);
+      -webkit-backdrop-filter: blur(6px) brightness(0.55);
+      background: rgba(0,0,0,0.35);
+      opacity: 0; pointer-events: none;
+      transition: opacity .55s cubic-bezier(.4,0,.2,1);
+    }
+    body.focus-mode .focus-overlay {
+      opacity: 1; pointer-events: auto;
+    }
+
+    /* Carte intro sticky — centrée à l'écran */
+    .intro-focus-card {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -46%);
+      z-index: 100;
+      width: min(680px, 90vw);
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 44px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.35);
+      opacity: 0; pointer-events: none;
+      transition:
+        opacity .55s cubic-bezier(.4,0,.2,1),
+        transform .55s cubic-bezier(.4,0,.2,1);
+    }
+    body.focus-mode .intro-focus-card {
+      opacity: 1; pointer-events: auto;
+      transform: translate(-50%, -50%);
+    }
+    .intro-focus-card .ifc-badge { margin-bottom: 16px; }
+    .intro-focus-card h2 {
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      line-height: 1.3; margin-bottom: 18px;
+      color: var(--text);
+    }
+    .intro-focus-card p {
+      font-size: 1.05rem; line-height: 1.75;
+      color: var(--text-muted); margin-bottom: 28px;
+      border-left: 4px solid var(--accent); padding-left: 16px;
+    }
+    .intro-focus-card .ifc-read-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white; padding: 14px 28px; border-radius: 50px;
+      font-weight: 700; font-size: 0.95rem; cursor: pointer;
+      border: none; font-family: var(--font-body);
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 6px 20px rgba(10,79,122,.25);
+    }
+    .intro-focus-card .ifc-read-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(10,79,122,.35);
+    }
+    .intro-focus-card .ifc-skip {
+      display: block; margin-top: 14px;
+      font-size: 0.82rem; color: var(--text-muted);
+      cursor: pointer; text-align: center;
+      transition: color .2s;
+    }
+    .intro-focus-card .ifc-skip:hover { color: var(--text); }
+
+    /* Le contenu principal s'estompe en focus mode */
+    .article-blur-target {
+      transition: filter .55s cubic-bezier(.4,0,.2,1), opacity .55s cubic-bezier(.4,0,.2,1);
+    }
+    body.focus-mode .article-blur-target {
+      filter: blur(3px);
+      opacity: 0.4;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Transition smooth vers lecture — scroll animé */
+    body.reading-mode .intro-focus-card { opacity: 0; pointer-events: none; transform: translate(-50%, -56%); }
+    body.reading-mode .focus-overlay    { opacity: 0; pointer-events: none; }
+    body.reading-mode .article-blur-target { filter: none; opacity: 1; pointer-events: auto; }
   </style>
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -219,8 +302,25 @@
   <!-- Reading progress bar -->
   <div class="reading-progress" id="readingProgress"></div>
 
+  <!-- OVERLAY BLUR (focus mode) -->
+  <div class="focus-overlay" id="focusOverlay"></div>
+
+  <!-- CARTE INTRO STICKY (focus mode) -->
+  <div class="intro-focus-card" id="introFocusCard">
+    <div class="ifc-badge"><span class="badge badge-primary">📖 Guide d'achat</span></div>
+    <h2>Comment choisir son climatiseur en 2026 : le guide complet</h2>
+    <p>Le marché des climatiseurs est saturé de modèles aux caractéristiques techniques complexes.
+                 Ce guide vous donne les clés pour choisir le bon appareil selon votre logement, votre usage
+                 et votre budget — sans vous perdre dans le jargon technique.</p>
+    <button class="ifc-read-btn" onclick="enterReading()">
+      📖 Lire l'article complet
+      <span style="font-size:1.1rem">→</span>
+    </button>
+    <span class="ifc-skip" onclick="enterReading()">Passer directement au contenu</span>
+  </div>
+
   <!-- BREADCRUMB -->
-  <div style="background:var(--white);border-bottom:1px solid var(--border)">
+  <div class="article-blur-target" style="background:var(--white);border-bottom:1px solid var(--border)">
     <div class="container">
       <div class="breadcrumb">
         <a href="../../index.html">Accueil</a>
@@ -233,7 +333,7 @@
   </div>
 
   <!-- ARTICLE LAYOUT -->
-  <div class="container">
+  <div class="container article-blur-target">
     <div class="article-layout">
 
       <!-- MAIN ARTICLE -->
@@ -458,11 +558,52 @@
 
   <script src="../../js/components.js"></script>
   <script>
+    // ── FOCUS MODE ──────────────────────────────────────────
+    let focusActive = false;
+    let readingActive = false;
+
+    // Déclenche le focus mode au premier scroll
+    function onFirstScroll() {
+      if (focusActive || readingActive) return;
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      if (scrollY > 40) {
+        focusActive = true;
+        document.body.classList.add('focus-mode');
+        window.removeEventListener('scroll', onFirstScroll);
+      }
+    }
+    window.addEventListener('scroll', onFirstScroll, { passive: true });
+
+    // Clic sur "Lire l'article" — transition vers lecture classique
+    function enterReading() {
+      if (readingActive) return;
+      readingActive = true;
+      focusActive   = false;
+
+      // Swap des classes pour la transition CSS
+      document.body.classList.remove('focus-mode');
+      document.body.classList.add('reading-mode');
+
+      // Scroll smooth vers le début de l'article après la transition
+      setTimeout(() => {
+        document.body.classList.remove('reading-mode');
+        const toc = document.querySelector('.toc');
+        if (toc) {
+          toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // Réactive le scroll listener pour la lecture
+        window.addEventListener('scroll', onFirstScroll, { passive: true });
+      }, 600);
+    }
+
+    // ── READING PROGRESS ────────────────────────────────────
     window.addEventListener('scroll', () => {
       const doc = document.documentElement;
       const progress = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
       document.getElementById('readingProgress').style.width = progress + '%';
     });
+
+    // ── SIDEBAR TOC ACTIVE ──────────────────────────────────
     const headings = document.querySelectorAll('.article-body h2');
     const tocLinks = document.querySelectorAll('#sidebarToc a');
     window.addEventListener('scroll', () => {
@@ -473,6 +614,8 @@
         if (l.getAttribute('href') === '#' + current) l.classList.add('active');
       });
     });
+
+    // ── COPY LINK ───────────────────────────────────────────
     function copyLink() {
       navigator.clipboard.writeText(window.location.href).then(() => {
         const btn = document.querySelector('.share-copy');
