@@ -2,26 +2,26 @@ module.exports = {
 
   // ── FICHIER DE SORTIE ──────────────────────────────────────────────────────
   // Le fichier HTML sera généré dans /articles/
-  outputFile: 'choisir-climatiseur-2025.html',
+  outputFile: 'choisir-climatiseur-generated.html',
 
   // ── META SEO ───────────────────────────────────────────────────────────────
   meta: {
-    title:       'Comment choisir son climatiseur en 2025 : le guide complet — MeilleurClim',
-    description: 'Guide complet pour choisir votre climatiseur en 2025 : puissance, classe énergétique, marques recommandées, budget et conseils d\'installation. Mis à jour 2025.',
-    canonical:   'https://meilleur-climatiseur-ventilateur.com/articles/choisir-climatiseur-2025.html',
-    ogTitle:     'Comment choisir son climatiseur en 2025 : le guide complet',
-    ogDesc:      'Guide complet pour choisir votre climatiseur en 2025 : puissance, classe énergétique, marques et budget.',
-    datePublished:  '2025-06-15',
+    title:       'Comment choisir son climatiseur en 2026 : le guide complet — MeilleurClim',
+    description: 'Guide complet pour choisir votre climatiseur en 2026 : puissance, classe énergétique, marques recommandées, budget et conseils d\'installation. Mis à jour 2025.',
+    canonical:   'https://meilleur-climatiseur-ventilateur.com/articles/choisir-climatiseur.html',
+    ogTitle:     'Comment choisir son climatiseur en 2026 : le guide complet',
+    ogDesc:      'Guide complet pour choisir votre climatiseur en 2026 : puissance, classe énergétique, marques et budget.',
+    datePublished:  '2026-03-08',
     dateModified:   '2026-03-08',
     section:        'Guide d\'achat',
   },
 
   // ── EN-TÊTE ARTICLE ────────────────────────────────────────────────────────
   badge:        '<span class="badge badge-primary">📖 Guide d\'achat</span>',
-  dateDisplay:  '15 juin 2025',
+  dateDisplay:  '8 mars 2026',
   readTime:     '12 min de lecture',
-  title:        'Comment choisir son climatiseur en 2025 : le guide complet',
-  breadcrumb:   'Comment choisir son climatiseur en 2025',
+  title:        'Comment choisir son climatiseur en 2026 : le guide complet',
+  breadcrumb:   'Comment choisir son climatiseur en 2026',
   intro:        `Le marché des climatiseurs est saturé de modèles aux caractéristiques techniques complexes.
                  Ce guide vous donne les clés pour choisir le bon appareil selon votre logement, votre usage
                  et votre budget — sans vous perdre dans le jargon technique.`,
@@ -164,9 +164,9 @@ module.exports = {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Comment choisir son climatiseur en 2025 : le guide complet",
-      "description": "Guide complet pour choisir votre climatiseur en 2025 : puissance, classe énergétique, marques recommandées, budget et conseils d'installation.",
-      "datePublished": "2025-06-15",
+      "headline": "Comment choisir son climatiseur en 2026 : le guide complet",
+      "description": "Guide complet pour choisir votre climatiseur en 2026 : puissance, classe énergétique, marques recommandées, budget et conseils d'installation.",
+      "datePublished": "2026-03-08",
       "dateModified": "2026-03-08",
       "author": {
         "@type": "Person",
@@ -189,7 +189,7 @@ module.exports = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://meilleur-climatiseur-ventilateur.com/" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://meilleur-climatiseur-ventilateur.com/blog.html" },
-        { "@type": "ListItem", "position": 3, "name": "Comment choisir son climatiseur en 2025" }
+        { "@type": "ListItem", "position": 3, "name": "Comment choisir son climatiseur en 2026" }
       ]
     },
     {
@@ -238,14 +238,14 @@ module.exports = {
       imgBg:      'background:linear-gradient(135deg,#059669,#10b981)',
       imgEmoji:   '🔋',
       badge:      '<span class="badge" style="background:rgba(5,150,105,0.12);color:#059669;font-size:0.75rem;margin-bottom:8px">Énergie</span>',
-      title:      'Combien coûte un clim à l\'heure en 2025 ?',
+      title:      'Calculer le prix et la consom d\'un climatiseur',
     },
     {
       href:       '../top3.html',
       imgBg:      'background:linear-gradient(135deg,#f59e0b,#f97316)',
       imgEmoji:   '🏆',
       badge:      '<span class="badge badge-warm" style="font-size:0.75rem;margin-bottom:8px">Comparatif</span>',
-      title:      'Top 3 meilleurs climatiseurs 2025',
+      title:      'Top 3 meilleurs climatiseurs 2026',
     },
   ],
 
