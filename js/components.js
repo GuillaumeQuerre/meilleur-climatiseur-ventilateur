@@ -2,10 +2,10 @@
 
 const NAV_HTML = `
 <header>
-  <nav class="container">
+  <nav class="container menu">
     <a href="index.html" class="logo">
       <div class="logo-icon">❄️</div>
-      Meilleur<span>CV</span>
+      M<span>C</span>V
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
